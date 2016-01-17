@@ -1,6 +1,5 @@
 //
 //  KJMCalculator.h
-//  FoodRX_version2
 //
 //  Created by Kevin Morton on 8/18/15.
 //  Copyright (c) 2015 Kevin Morton. All rights reserved.
@@ -17,6 +16,8 @@
 + (NSNumber *)subtract:(NSNumber *)number from:(NSNumber *)number2;
 + (NSNumber *)multiply:(NSNumber *)number with:(NSNumber *)number2;
 + (NSNumber *)divide:(NSNumber *)number by:(NSNumber *)number2;
+
++ (NSNumber *)sumItemsInArray:(NSArray *)data;
 
 /*************** Rounding ***********/
 

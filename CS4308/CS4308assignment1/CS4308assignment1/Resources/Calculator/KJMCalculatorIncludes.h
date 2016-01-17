@@ -10,6 +10,6 @@
 #define FoodRX_version2_KJMCalculatorIncludes_h
 
 #import "KJMCalculator.h"
-#import "KJMCalculator+USDA.h"
 #import "KJMCalculator+Fractions.h"
-#endif /* ifndef FoodRX_version2_KJMCalculatorIncludes_h */
+
+#endif
