@@ -1,0 +1,10 @@
+#import "CS4308assignment1-Prefix.pch"
+
+#ifdef __OBJC__
+
+    #define EXP_SHORTHAND
+    #import <Specta/Specta.h>
+    #import <Expecta/Expecta.h>
+    #import <OCMock/OCMock.h>
+
+#endif
