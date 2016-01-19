@@ -1,6 +1,5 @@
 //
 //  KJMCalculator+Fractions.h
-//  FoodRX_version2
 //
 //  Created by Kevin Morton on 8/19/15.
 //  Copyright (c) 2015 Kevin Morton. All rights reserved.
@@ -10,6 +9,6 @@
 
 @interface KJMCalculator (Fractions)
 
-+ (NSNumber *)getFractionValue:(NSInteger)index;
++ (NSNumber *)fractionFromNumber:(NSInteger)index;
 
 @end
