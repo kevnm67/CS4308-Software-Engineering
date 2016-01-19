@@ -17,17 +17,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="za1-Sr-MFn">
-                                <rect key="frame" x="0.0" y="64" width="320" height="224"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="244"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="average" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9ew-ne-w66">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="124"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="144"/>
                                         <color key="backgroundColor" red="0.17254902422428131" green="0.24313725531101227" blue="0.31372550129890442" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="textColor" red="0.92549020051956177" green="0.94117647409439087" blue="0.94509804248809814" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guj-SR-Lkq">
-                                        <rect key="frame" x="0.0" y="144" width="320" height="30"/>
+                                        <rect key="frame" x="0.0" y="164" width="320" height="30"/>
                                         <color key="backgroundColor" red="0.92549020049999997" green="0.94117647410000005" blue="0.94509804249999996" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                         <state key="normal" title="Click to select a number">
@@ -37,26 +37,26 @@
                                             <action selector="showNumericalPickerView" destination="rem-ig-aDC" eventType="touchUpInside" id="vBE-uD-lPc"/>
                                         </connections>
                                     </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aCQ-rK-Gxo">
-                                        <rect key="frame" x="0.0" y="194" width="320" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="aCQ-rK-Gxo">
+                                        <rect key="frame" x="0.0" y="214" width="320" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3an-85-IRd">
-                                                <rect key="frame" x="0.0" y="0.0" width="160" height="30"/>
-                                                <color key="backgroundColor" red="0.92549020051956177" green="0.94117647409439087" blue="0.94509804248809814" alpha="1" colorSpace="calibratedRGB"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="158" height="30"/>
+                                                <color key="backgroundColor" red="0.49803921580314636" green="0.54901963472366333" blue="0.55294120311737061" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                 <state key="normal" title="Clear">
-                                                    <color key="titleColor" red="0.20392157137393951" green="0.28627452254295349" blue="0.36862745881080627" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleColor" red="0.17254902422428131" green="0.24313725531101227" blue="0.31372550129890442" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="didPressClearButton:" destination="rem-ig-aDC" eventType="touchUpInside" id="V1C-B0-ZKl"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPw-1h-4Xu">
-                                                <rect key="frame" x="160" y="0.0" width="160" height="30"/>
-                                                <color key="backgroundColor" red="0.92549020051956177" green="0.94117647409439087" blue="0.94509804248809814" alpha="1" colorSpace="calibratedRGB"/>
+                                                <rect key="frame" x="162" y="0.0" width="158" height="30"/>
+                                                <color key="backgroundColor" red="0.49803921580314636" green="0.54901963472366333" blue="0.55294120311737061" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                 <state key="normal" title="Enter">
-                                                    <color key="titleColor" red="0.20392157137393951" green="0.28627452254295349" blue="0.36862745881080627" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleColor" red="0.17254902422428131" green="0.24313725531101227" blue="0.31372550129890442" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="didPressComputeButton:" destination="rem-ig-aDC" eventType="touchUpInside" id="r5Y-qu-AB8"/>
@@ -71,7 +71,7 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="za1-Sr-MFn" secondAttribute="trailing" id="7g4-ba-Ney"/>
                             <constraint firstItem="za1-Sr-MFn" firstAttribute="top" secondItem="Bqw-hL-vKR" secondAttribute="bottom" id="NVx-sG-4Qv"/>
-                            <constraint firstItem="cot-MZ-CcD" firstAttribute="top" secondItem="za1-Sr-MFn" secondAttribute="bottom" constant="280" id="lZd-5a-QEE"/>
+                            <constraint firstItem="cot-MZ-CcD" firstAttribute="top" secondItem="za1-Sr-MFn" secondAttribute="bottom" constant="260" id="lZd-5a-QEE"/>
                             <constraint firstItem="za1-Sr-MFn" firstAttribute="leading" secondItem="3Zv-Za-n2k" secondAttribute="leading" id="nOS-CH-mlZ"/>
                         </constraints>
                     </view>
