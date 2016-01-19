@@ -1,6 +1,5 @@
 //
 //  KJMCalculator.m
-//  FoodRX_version2
 //
 //  Created by Kevin Morton on 8/18/15.
 //  Copyright (c) 2015 Kevin Morton. All rights reserved.
@@ -48,7 +47,27 @@
     return [sourceOne decimalNumberByDividingBy:sourceTwo withBehavior:[self kjmRoundingBehavior]];
 }
 
++ (NSNumber *)sumItemsInArray:(NSArray *)data
+{
+    __block NSNumber *sum;
+    
+    [data enumerateObjectsUsingBlock:^(id _Nonnull obj, NSUInteger idx, BOOL *_Nonnull stop) {
+        sum = [self add:(NSNumber *)obj to:sum];
+    }];
+    
+    return sum;
+}
+
++ (NSNumber *)averageItems:(NSArray *)data
+{
+    NSUInteger count = data.count;
+    NSNumber *sum    = [self sumItemsInArray:data];
+    
+    return [self divide:sum by:@(count)];
+}
+
 #pragma mark - Rounding behavior -
+
 + (NSDecimalNumberHandler *)kjmRoundingBehavior
 {
     return [self kmCalculatorRoundingScale:2];
