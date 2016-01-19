@@ -11,5 +11,6 @@
 
 #import "KJMCalculator.h"
 #import "KJMCalculator+Fractions.h"
+#import "NSString+KMUtilities.h"
 
 #endif

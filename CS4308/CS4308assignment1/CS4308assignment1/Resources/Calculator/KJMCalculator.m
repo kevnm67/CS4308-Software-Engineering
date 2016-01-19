@@ -58,6 +58,14 @@
     return sum;
 }
 
++ (NSNumber *)averageItems:(NSArray *)data
+{
+    NSUInteger count = data.count;
+    NSNumber *sum    = [self sumItemsInArray:data];
+    
+    return [self divide:sum by:@(count)];
+}
+
 #pragma mark - Rounding behavior -
 
 + (NSDecimalNumberHandler *)kjmRoundingBehavior

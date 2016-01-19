@@ -19,6 +19,8 @@
 
 + (NSNumber *)sumItemsInArray:(NSArray *)data;
 
++ (NSNumber *)averageItems:(NSArray *)data;
+
 /*************** Rounding ***********/
 
 /**

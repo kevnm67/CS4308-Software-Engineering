@@ -21,6 +21,8 @@
 		B86A4F1C1C4C01B600DDF2A4 /* KJMColors.m in Sources */ = {isa = PBXBuildFile; fileRef = B86A4F1B1C4C01B600DDF2A4 /* KJMColors.m */; };
 		B86A4F1F1C4C06CC00DDF2A4 /* NSArray+KMarrayUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = B86A4F1E1C4C06CC00DDF2A4 /* NSArray+KMarrayUtilities.m */; };
 		B86A4F201C4C06CC00DDF2A4 /* NSArray+KMarrayUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = B86A4F1E1C4C06CC00DDF2A4 /* NSArray+KMarrayUtilities.m */; };
+		B8C582161C4DBD030054FA93 /* ComputeAverageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C582151C4DBD030054FA93 /* ComputeAverageViewController.m */; };
+		B8C582191C4DC29B0054FA93 /* NSString+KMUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C582181C4DC29B0054FA93 /* NSString+KMUtilities.m */; };
 		D779E5F7BD2AF1183A9F3280 /* KMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E51865A30713CBDC67F8619 /* KMAppDelegate.m */; };
 		DB4ADCBD7093AB42493DFB5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7405E1274F0ABA8A44143049 /* main.m */; };
 		E2D9DC9E47DBA96526F41362 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CA6816E4E8BDA8198BCA9DD /* LaunchScreen.xib */; };
@@ -68,6 +70,10 @@
 		B86A4F1D1C4C06CC00DDF2A4 /* NSArray+KMarrayUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+KMarrayUtilities.h"; path = "Categories/NSArray+KMarrayUtilities.h"; sourceTree = "<group>"; };
 		B86A4F1E1C4C06CC00DDF2A4 /* NSArray+KMarrayUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+KMarrayUtilities.m"; path = "Categories/NSArray+KMarrayUtilities.m"; sourceTree = "<group>"; };
 		B86A4F211C4C0D0B00DDF2A4 /* KJMDebugMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJMDebugMacros.h; sourceTree = "<group>"; };
+		B8C582141C4DBD030054FA93 /* ComputeAverageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComputeAverageViewController.h; sourceTree = "<group>"; };
+		B8C582151C4DBD030054FA93 /* ComputeAverageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComputeAverageViewController.m; sourceTree = "<group>"; };
+		B8C582171C4DC29B0054FA93 /* NSString+KMUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+KMUtilities.h"; path = "Catagories/NSString+KMUtilities.h"; sourceTree = "<group>"; };
+		B8C582181C4DC29B0054FA93 /* NSString+KMUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+KMUtilities.m"; path = "Catagories/NSString+KMUtilities.m"; sourceTree = "<group>"; };
 		BE52E2678372F1A034CD4A0A /* CS4308assignment1-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CS4308assignment1-Prefix.pch"; sourceTree = "<group>"; };
 		D9EE96DA7A755B0BFE8D1D6A /* Pods_unit_tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_unit_tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F88EBF2753511E9C9CE80DA1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -196,6 +202,8 @@
 			children = (
 				135DDDCA4CC59D2E8600BCA7 /* KMAppDelegate.h */,
 				2E51865A30713CBDC67F8619 /* KMAppDelegate.m */,
+				B8C582141C4DBD030054FA93 /* ComputeAverageViewController.h */,
+				B8C582151C4DBD030054FA93 /* ComputeAverageViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -251,6 +259,8 @@
 				B86A4F071C4BF9FA00DDF2A4 /* KJMCalculator+Fractions.h */,
 				B86A4F081C4BF9FA00DDF2A4 /* KJMCalculator+Fractions.m */,
 				B86A4F0D1C4BF9FA00DDF2A4 /* KJMCalculatorIncludes.h */,
+				B8C582171C4DC29B0054FA93 /* NSString+KMUtilities.h */,
+				B8C582181C4DC29B0054FA93 /* NSString+KMUtilities.m */,
 			);
 			name = Calculator;
 			path = ../Calculator;
@@ -562,11 +572,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8C582161C4DBD030054FA93 /* ComputeAverageViewController.m in Sources */,
 				D779E5F7BD2AF1183A9F3280 /* KMAppDelegate.m in Sources */,
 				DB4ADCBD7093AB42493DFB5E /* main.m in Sources */,
 				B86A4F181C4BFAD500DDF2A4 /* CRLMethodLogFormatter.m in Sources */,
 				B86A4F0E1C4BF9FA00DDF2A4 /* KJMCalculator+Fractions.m in Sources */,
 				B86A4F1C1C4C01B600DDF2A4 /* KJMColors.m in Sources */,
+				B8C582191C4DC29B0054FA93 /* NSString+KMUtilities.m in Sources */,
 				B86A4F1F1C4C06CC00DDF2A4 /* NSArray+KMarrayUtilities.m in Sources */,
 				B86A4F121C4BF9FA00DDF2A4 /* KJMCalculator.m in Sources */,
 			);

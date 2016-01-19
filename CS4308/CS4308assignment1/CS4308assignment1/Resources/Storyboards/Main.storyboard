@@ -1,7 +1,120 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="14A379a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="CSa-RH-bnz">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Compute Average View Controller-->
+        <scene sceneID="Z7e-F2-Ngd">
+            <objects>
+                <viewController storyboardIdentifier="kComputeAverageViewController" id="rem-ig-aDC" customClass="ComputeAverageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bqw-hL-vKR"/>
+                        <viewControllerLayoutGuide type="bottom" id="cot-MZ-CcD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Zv-Za-n2k">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="za1-Sr-MFn">
+                                <rect key="frame" x="0.0" y="64" width="320" height="224"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="average" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9ew-ne-w66">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="124"/>
+                                        <color key="backgroundColor" red="0.17254902422428131" green="0.24313725531101227" blue="0.31372550129890442" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.92549020051956177" green="0.94117647409439087" blue="0.94509804248809814" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guj-SR-Lkq">
+                                        <rect key="frame" x="0.0" y="144" width="320" height="30"/>
+                                        <color key="backgroundColor" red="0.92549020049999997" green="0.94117647410000005" blue="0.94509804249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <state key="normal" title="Click to select a number">
+                                            <color key="titleColor" red="0.2039215714" green="0.28627452250000002" blue="0.36862745879999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showNumericalPickerView" destination="rem-ig-aDC" eventType="touchUpInside" id="vBE-uD-lPc"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aCQ-rK-Gxo">
+                                        <rect key="frame" x="0.0" y="194" width="320" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3an-85-IRd">
+                                                <rect key="frame" x="0.0" y="0.0" width="160" height="30"/>
+                                                <color key="backgroundColor" red="0.92549020051956177" green="0.94117647409439087" blue="0.94509804248809814" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                <state key="normal" title="Clear">
+                                                    <color key="titleColor" red="0.20392157137393951" green="0.28627452254295349" blue="0.36862745881080627" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didPressClearButton:" destination="rem-ig-aDC" eventType="touchUpInside" id="V1C-B0-ZKl"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPw-1h-4Xu">
+                                                <rect key="frame" x="160" y="0.0" width="160" height="30"/>
+                                                <color key="backgroundColor" red="0.92549020051956177" green="0.94117647409439087" blue="0.94509804248809814" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                <state key="normal" title="Enter">
+                                                    <color key="titleColor" red="0.20392157137393951" green="0.28627452254295349" blue="0.36862745881080627" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="didPressComputeButton:" destination="rem-ig-aDC" eventType="touchUpInside" id="r5Y-qu-AB8"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92549020051956177" green="0.94117647409439087" blue="0.94509804248809814" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="za1-Sr-MFn" secondAttribute="trailing" id="7g4-ba-Ney"/>
+                            <constraint firstItem="za1-Sr-MFn" firstAttribute="top" secondItem="Bqw-hL-vKR" secondAttribute="bottom" id="NVx-sG-4Qv"/>
+                            <constraint firstItem="cot-MZ-CcD" firstAttribute="top" secondItem="za1-Sr-MFn" secondAttribute="bottom" constant="280" id="lZd-5a-QEE"/>
+                            <constraint firstItem="za1-Sr-MFn" firstAttribute="leading" secondItem="3Zv-Za-n2k" secondAttribute="leading" id="nOS-CH-mlZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0AN-Me-rfd">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="gOa-t0-GaY">
+                            <rect key="frame" x="40" y="7" width="240" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Average"/>
+                                <segment title="History"/>
+                            </segments>
+                            <connections>
+                                <action selector="didPressSegmentControl:" destination="rem-ig-aDC" eventType="valueChanged" id="ayx-CK-Yk1"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="computeButton" destination="oPw-1h-4Xu" id="eSi-ec-5aE"/>
+                        <outlet property="numericDisplayTextView" destination="9ew-ne-w66" id="QoQ-6o-f3B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="93V-tv-5u9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1002" y="573"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="t0E-H6-Ndd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CSa-RH-bnz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xi8-oa-Zes">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rem-ig-aDC" kind="relationship" relationship="rootViewController" id="aad-mG-xjG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sWV-fh-DSK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="569.06666666666661" y="573.67999999999995"/>
+        </scene>
+    </scenes>
 </document>
