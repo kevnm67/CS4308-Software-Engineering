@@ -43,6 +43,16 @@ static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
     XCTAssertEqual(sum.intValue, (int)435);
 }
 
+- (void)testComputeAverageFromItemsInArray
+{
+    NSArray *numbersArray = [NSArray numericalArrayFromZeroToEndValue:@5];
+    XCTAssertNotNil(numbersArray);
+    
+    NSNumber *avg = [KJMCalculator averageItems:numbersArray];
+    // Average of 10 should = 2
+    XCTAssertEqual(avg.intValue, (int)2);
+}
+
 - (void)tearDown
 {
     // Put teardown code here. This method is called after the invocation of each test method in the class.

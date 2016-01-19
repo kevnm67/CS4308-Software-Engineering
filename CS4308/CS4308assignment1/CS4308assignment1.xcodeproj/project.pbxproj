@@ -110,13 +110,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		18BE61AEDE9E8131B4A123CF /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		1EBEA8A5300DAAA229D3E5F6 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,7 +121,6 @@
 		344CE6F5545E749237313CDD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				B86A4F141C4BFAD500DDF2A4 /* KJMClasses */,
 				9C4B1F4C295FC6B1D6AE733D /* Images.xcassets */,
 				51AAF53383D24E2B80EC71AD /* Other-Sources */,
 				841683D422FE4EBAD0ACE546 /* Settings.bundle */,
@@ -152,11 +144,7 @@
 			children = (
 				AB2D07D217F616F616DE6F32 /* Categories */,
 				96AAE408C07C745DA5374D27 /* Controllers */,
-				B7B1936431133D34373A3FB2 /* Headers */,
-				920B039F6CBB1738B62EDCCD /* Models */,
-				AF6B6764F8DA3F2772D932C9 /* Protocols */,
 				344CE6F5545E749237313CDD /* Resources */,
-				18BE61AEDE9E8131B4A123CF /* ViewModels */,
 				8A9681E6B0032F2A0B0300B4 /* Views */,
 			);
 			path = CS4308assignment1;
@@ -190,13 +178,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		920B039F6CBB1738B62EDCCD /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		96AAE408C07C745DA5374D27 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,15 +206,9 @@
 		AB2D07D217F616F616DE6F32 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				B86A4F141C4BFAD500DDF2A4 /* KJMClasses */,
 			);
 			path = Categories;
-			sourceTree = "<group>";
-		};
-		AF6B6764F8DA3F2772D932C9 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Protocols;
 			sourceTree = "<group>";
 		};
 		B5A83D408BDEE960B8CD1B89 /* Tests */ = {
@@ -242,13 +217,6 @@
 				B86A4F041C4BF89D00DDF2A4 /* KMCS4308assignment1Tests.m */,
 			);
 			path = Tests;
-			sourceTree = "<group>";
-		};
-		B7B1936431133D34373A3FB2 /* Headers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Headers;
 			sourceTree = "<group>";
 		};
 		B86A4F061C4BF9FA00DDF2A4 /* Calculator */ = {
@@ -276,7 +244,8 @@
 				B86A4F1D1C4C06CC00DDF2A4 /* NSArray+KMarrayUtilities.h */,
 				B86A4F1E1C4C06CC00DDF2A4 /* NSArray+KMarrayUtilities.m */,
 			);
-			path = KJMClasses;
+			name = KJMClasses;
+			path = ../Resources/KJMClasses;
 			sourceTree = "<group>";
 		};
 		B86A4F151C4BFAD500DDF2A4 /* Debugging */ = {

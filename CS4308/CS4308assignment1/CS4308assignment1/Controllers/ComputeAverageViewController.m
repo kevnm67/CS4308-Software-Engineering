@@ -17,12 +17,15 @@ typedef NS_ENUM (NSInteger, KMSegmentControlIndex){
 
 @interface ComputeAverageViewController ()<UIPickerViewDelegate, UIPickerViewDataSource>
 
+/**
+ *  All numbers entered are stored in this array.
+ */
 @property (strong, nonatomic) NSMutableArray *runningAverage;
 @property (weak, nonatomic) IBOutlet UIButton *computeButton;
 @property (strong, nonatomic) NSMutableString *historyString;
 
 /**
- *  Displays the current average of all numbers.
+ *  Displays the current average and history of all numbers entered.
  */
 @property (weak, nonatomic) IBOutlet UITextView *numericDisplayTextView;
 
@@ -80,17 +83,10 @@ typedef NS_ENUM (NSInteger, KMSegmentControlIndex){
 
 - (NSNumber *)currentAverage
 {
-    NSNumber *sum = [KJMCalculator sumItemsInArray:self.runningAverage];
-    NSLog(@"sum: %@", sum);
-    
-    NSLog(@"items: %ld", self.runningAverage.count);
-    
     return [KJMCalculator averageItems:self.runningAverage];
 }
 
 #pragma mark - RMPickerViewController Delegate -
-
-#pragma mark - Actions -
 
 - (IBAction)showNumericalPickerView
 {
