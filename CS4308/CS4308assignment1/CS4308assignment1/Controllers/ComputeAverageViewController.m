@@ -10,7 +10,7 @@
 #import "KJMCalculatorIncludes.h"
 @import RMPickerViewController;
 
-typedef NS_ENUM (NSInteger, KMSegmentControlIndex){
+typedef NS_ENUM (NSInteger, KMSegmentControlIndex) {
     KMSegmentControlIndexAverage,
     KMSegmentControlIndexHistory
 };
@@ -22,12 +22,30 @@ typedef NS_ENUM (NSInteger, KMSegmentControlIndex){
  */
 @property (strong, nonatomic) NSMutableArray *runningAverage;
 @property (weak, nonatomic) IBOutlet UIButton *computeButton;
+
+/**
+ *  History of all numbers used in current average.
+ */
 @property (strong, nonatomic) NSMutableString *historyString;
 
 /**
  *  Displays the current average and history of all numbers entered.
  */
 @property (weak, nonatomic) IBOutlet UITextView *numericDisplayTextView;
+
+/**
+ *  Creates a mutable string displaying all values used in the final average calculation.
+ *
+ *  @param value Users most recently selected value from the picker (to be added to the running avgerage).
+ */
+- (void)updateHistoryWithValue:(NSString *)value;
+
+/**
+ *  Updates all variables with the most recently selected value.
+ *
+ *  @param value Users most recently selected value from the picker.
+ */
+- (void)addValueToCurrentAverage:(NSNumber *)value;
 
 @end
 
@@ -90,6 +108,7 @@ typedef NS_ENUM (NSInteger, KMSegmentControlIndex){
 
 - (IBAction)showNumericalPickerView
 {
+    // Numerical picker for the user to select a number to add to the running average.
     RMAction<RMActionController<UIPickerView *> *> *selectAction = [RMAction<RMActionController < UIPickerView *> * > actionWithTitle:@"OK" style:RMActionStyleDone andHandler:^(RMActionController < UIPickerView * > *controller) {
         NSMutableArray *selectedRows = [NSMutableArray array];
         
@@ -109,6 +128,8 @@ typedef NS_ENUM (NSInteger, KMSegmentControlIndex){
     pickerController.disableBouncingEffects = TRUE;
     pickerController.disableMotionEffects   = TRUE;
     pickerController.disableBlurEffects     = TRUE;
+    
+    // Show the picker view for the user to select a new number.
     [self.navigationController presentViewController:pickerController animated:YES completion:nil];
 }
 

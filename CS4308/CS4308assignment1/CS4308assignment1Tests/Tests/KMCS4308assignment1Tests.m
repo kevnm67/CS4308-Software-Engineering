@@ -14,7 +14,7 @@
 #import "NSArray+KMarrayUtilities.h"
 #import <CocoaLumberjack/CocoaLumberjack.h>
 
-static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
+//static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
 
 @interface KMCS4308assignment1Tests : XCTestCase
 
@@ -30,15 +30,18 @@ static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
 
 - (void)testNumbersArrayCreation
 {
+    // Create an array of numbers from 0 to 30
     NSArray *numbers = [NSArray numericalArrayFromZeroToEndValue:@30];
     XCTAssertEqual(numbers.count, (NSUInteger)30);
 }
 
 - (void)testSumItemsInArray
 {
+    // Create an array of numbers from 0 to 30
     NSArray *numbersArray = [NSArray numericalArrayFromZeroToEndValue:@30];
     XCTAssertNotNil(numbersArray);
     
+    // Iterate the numbers array and sum all the values.
     NSNumber *sum = [KJMCalculator sumItemsInArray:numbersArray];
     XCTAssertEqual(sum.intValue, (int)435);
 }
@@ -48,6 +51,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
     NSArray *numbersArray = [NSArray numericalArrayFromZeroToEndValue:@5];
     XCTAssertNotNil(numbersArray);
     
+    // Iterate the numbers array and average all the values.
     NSNumber *avg = [KJMCalculator averageItems:numbersArray];
     // Average of 10 should = 2
     XCTAssertEqual(avg.intValue, (int)2);

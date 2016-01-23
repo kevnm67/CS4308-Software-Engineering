@@ -2,14 +2,10 @@ source 'https://github.com/CocoaPods/Specs'
 
 platform :ios, '9.0'
 use_frameworks!
-
-# ignore all warnings from all pods
 inhibit_all_warnings!
 
 pod 'RMPickerViewController'
 pod 'CocoaLumberjack'
-pod 'Organic'
-
 
 target :unit_tests, :exclusive => true do
   link_with 'CS4308assignment1Tests'

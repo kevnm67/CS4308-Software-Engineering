@@ -85,13 +85,11 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/CocoaLumberjack.framework"
-  install_framework "Pods/Organic.framework"
   install_framework "Pods/RMActionController.framework"
   install_framework "Pods/RMPickerViewController.framework"
 fi
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods/CocoaLumberjack.framework"
-  install_framework "Pods/Organic.framework"
   install_framework "Pods/RMActionController.framework"
   install_framework "Pods/RMPickerViewController.framework"
 fi
