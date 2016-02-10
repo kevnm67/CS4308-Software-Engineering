@@ -1,0 +1,3 @@
+language: objective-c
+xcode_project: CS4308assignment1.xcodeproj # path to your xcodeproj folder
+xcode_scheme: CS4308assignment1Tests

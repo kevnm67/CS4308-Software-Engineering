@@ -20,18 +20,18 @@ typedef NS_ENUM (NSInteger, KMSegmentControlIndex) {
 /**
  *  All numbers entered are stored in this array.
  */
-@property (strong, nonatomic) NSMutableArray *runningAverage;
-@property (weak, nonatomic) IBOutlet UIButton *computeButton;
+@property (nonatomic, strong) NSMutableArray *runningAverage;
+@property (nonatomic, weak) IBOutlet UIButton *computeButton;
 
 /**
  *  History of all numbers used in current average.
  */
-@property (strong, nonatomic) NSMutableString *historyString;
+@property (nonatomic, strong) NSMutableString *historyString;
 
 /**
  *  Displays the current average and history of all numbers entered.
  */
-@property (weak, nonatomic) IBOutlet UITextView *numericDisplayTextView;
+@property (nonatomic, weak) IBOutlet UITextView *numericDisplayTextView;
 
 /**
  *  Creates a mutable string displaying all values used in the final average calculation.
@@ -51,13 +51,11 @@ typedef NS_ENUM (NSInteger, KMSegmentControlIndex) {
 
 @implementation ComputeAverageViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
 }
 
-- (void)addValueToCurrentAverage:(NSNumber *)value
-{
+- (void)addValueToCurrentAverage:(NSNumber *)value {
     if (!self.runningAverage) {
         self.runningAverage = [[NSMutableArray alloc] init];
     }
@@ -67,8 +65,7 @@ typedef NS_ENUM (NSInteger, KMSegmentControlIndex) {
     self.numericDisplayTextView.text = [self currentAverage].stringValue;
 }
 
-- (void)updateHistoryWithValue:(NSString *)value
-{
+- (void)updateHistoryWithValue:(NSString *)value {
     if (self.historyString) {
         [self.historyString appendString:[NSString stringWithFormat:@" + %@", value]];
     }
@@ -77,20 +74,19 @@ typedef NS_ENUM (NSInteger, KMSegmentControlIndex) {
     }
 }
 
-- (IBAction)didPressComputeButton:(id)sender
-{
+- (IBAction)didPressComputeButton:(id)sender {
     self.numericDisplayTextView.text = [self currentAverage].stringValue;
 }
 
-- (IBAction)didPressClearButton:(id)sender
-{
+- (IBAction)didPressClearButton:(id)sender {
+    // Clear all current data and start over.
     self.runningAverage              = nil;
     self.numericDisplayTextView.text = @"0";
     self.historyString               = nil;
 }
 
-- (IBAction)didPressSegmentControl:(UISegmentedControl *)sender
-{
+- (IBAction)didPressSegmentControl:(UISegmentedControl *)sender {
+    // Switch between viewing the current average and a history of all numbers used in the calculation.
     if ([sender selectedSegmentIndex] == KMSegmentControlIndexAverage) {
         self.numericDisplayTextView.text = [self currentAverage].stringValue;
     }
@@ -99,15 +95,13 @@ typedef NS_ENUM (NSInteger, KMSegmentControlIndex) {
     }
 }
 
-- (NSNumber *)currentAverage
-{
+- (NSNumber *)currentAverage {
     return [KJMCalculator averageItems:self.runningAverage];
 }
 
 #pragma mark - RMPickerViewController Delegate -
 
-- (IBAction)showNumericalPickerView
-{
+- (IBAction)showNumericalPickerView {
     // Numerical picker for the user to select a number to add to the running average.
     RMAction<RMActionController<UIPickerView *> *> *selectAction = [RMAction<RMActionController < UIPickerView *> * > actionWithTitle:@"OK" style:RMActionStyleDone andHandler:^(RMActionController < UIPickerView * > *controller) {
         NSMutableArray *selectedRows = [NSMutableArray array];
@@ -133,18 +127,15 @@ typedef NS_ENUM (NSInteger, KMSegmentControlIndex) {
     [self.navigationController presentViewController:pickerController animated:YES completion:nil];
 }
 
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
-{
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
     return 1;
 }
 
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
-{
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
     return 100;
 }
 
-- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
-{
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     return [NSString stringWithFormat:@"%lu", (long)row];
 }
 
